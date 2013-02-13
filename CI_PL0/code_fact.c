@@ -53,46 +53,31 @@ int fa2(void) {
 		error(ERR_UKN_IDENT, NULL);
 		return FAIL;
 	}
-	
-	if(b->type < btype_Const || b->type > btype_Var) {
-		error(ERR_EXP_CONSTVAR, NULL);
-		return FAIL;
+
+	if(b->type == btype_Const) {
+		constant_p c = b->object;
+		return code(puConst, c->index);
 	}
 	
-	if(b->procIndex == 0) {
-		if(b->type == btype_Const) {
-			constant_p c = (constant_p)b->object;
-			
-			return code(puConst, c->index);
-		} else {
-			variable_p v = (variable_p)b->object;
+	if(b->type == btype_Var) {
+		variable_p v;
+		
+		if(b->procIndex == 0) {
+			v = b->object;
 			
 			return code(puValVrMain, v->displacement);
 		}
-	}
-	
-	if(b->procIndex == currentProcedure->index) {
-		if(b->type == btype_Const) {
-			constant_p c = (constant_p)b->object;
-			
-			return code(puConst, c->index);
-		} else {
-			variable_p v = (variable_p)b->object;
+		
+		if(b->procIndex == currentProcedure->index) {
+			v = b->object;
 			
 			return code(puValVrLocl, v->displacement);
 		}
-	}
-	
-	if(b->type == btype_Const) {
-		constant_p c = (constant_p)b->object;
 		
-		return code(puConst, c->index);
-	} else {
-		variable_p v = (variable_p)b->object;
-		
+		v = b->object;
 		return code(puValVrGlob, v->displacement, b->procIndex);
 	}
 	
-	error(ERR_UNKNOWN, NULL);
+	error(ERR_EXP_CONSTVAR, NULL);
 	return FAIL;
 }

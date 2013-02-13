@@ -103,6 +103,7 @@ int st4(void) {
 	for(ce = list_prev(iter); ce != NULL; ce = list_prev(iter)) {
 		if(ce->index == l->index) {
 			destroyLabel(l);
+			destroy_iterator(iter);
 			return OK;
 		}
 		if(ce->op != EndOfCode) {
@@ -112,6 +113,7 @@ int st4(void) {
 		}
 	}
 	
+	destroy_iterator(iter);
 	error(ERR_UNKNOWN, NULL);
 	return FAIL;
 }
@@ -212,6 +214,7 @@ int st6(void) {
 	l->index = l->element->index;
 	list_add(labelStack, l, sizeof(label_t));
 	
+	destroy_iterator(iter);
 	return OK;
 }
 
@@ -257,6 +260,7 @@ int st7(void) {
 			i -= 2;
 		}
 	}
+	destroy_iterator(iter);
 	
 	if(code(jmp, i) == FAIL) {
 		error(ERR_CODEGEN, NULL);
