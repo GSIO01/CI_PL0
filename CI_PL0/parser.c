@@ -100,31 +100,31 @@ bow_t gConstDecl[] =
 
 bow_t gVarDeclList[] =
 {
-/*0*/	{ BgSy,	{(ul)zVAR	},	NULL,  1,  -1 },
+/*0*/	{ BgSy,	{(ul)zVAR		},	NULL,  1,  -1 },
 /*1*/	{ BgGr,	{(ul)G_VARDECL	},	NULL,  3,  -1 },
-/*2*/	{ BgSy,	{(ul)','	},	NULL,  1,  -1 },
-/*3*/	{ BgSy,	{(ul)';'	},	NULL,  4,   2 },
-/*4*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
+/*2*/	{ BgSy,	{(ul)','		},	NULL,  1,  -1 },
+/*3*/	{ BgSy,	{(ul)';'		},	NULL,  4,   2 },
+/*4*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
 };
 
 bow_t gVarDecl[] = 
 {
-/*0*/	{ BgMo,	{(ul)mcIdent	},	 bl3,  1,  -1 },
+/*0*/	{ BgMo,	{(ul)mcIdent},	 bl3,  1,  -1 },
 /*1*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
 };
 
 bow_t gProcDeclList[] =
 {
 /*0*/	{ BgGr,	{(ul)G_PROCDECL	},	NULL,  0,   1 },
-/*1*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 },
+/*1*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 },
 };
 
 bow_t gProcDecl[] =
 {
 /*0*/	{ BgSy,	{(ul)zPRC	},	NULL,  1,  -1 },
-/*1*/	{ BgMo,	{(ul)mcIdent	},	 bl4,  2,  -1 },
+/*1*/	{ BgMo,	{(ul)mcIdent},	 bl4,  2,  -1 },
 /*2*/	{ BgSy,	{(ul)';'	},	NULL,  3,  -1 },
-/*3*/	{ BgGr,	{(ul)G_BLOCK	},	NULL,  4,  -1 },
+/*3*/	{ BgGr,	{(ul)G_BLOCK},	NULL,  4,  -1 },
 /*4*/	{ BgSy,	{(ul)';'	},	NULL,  5,  -1 },
 /*5*/	{ BgEn, {(ul)0		},	NULL, -1,  -1 }
 };
@@ -133,28 +133,28 @@ bow_t gStatement[] =
 {
 /*0*/	{ BgGr,	{(ul)G_ASSIGNMENTSTMT	},	NULL,  8,   1 },
 /*1*/	{ BgGr,	{(ul)G_CONDITIONALSTMT	},	NULL,  8,   2 },
-/*2*/	{ BgGr,	{(ul)G_LOOPSTMT		},	NULL,  8,   3 },
-/*3*/	{ BgGr,	{(ul)G_COMPOUNDSTMT	},	NULL,  8,   4 },
+/*2*/	{ BgGr,	{(ul)G_LOOPSTMT			},	NULL,  8,   3 },
+/*3*/	{ BgGr,	{(ul)G_COMPOUNDSTMT		},	NULL,  8,   4 },
 /*4*/	{ BgGr,	{(ul)G_PROCEDURECALL	},	NULL,  8,   5 },
-/*5*/	{ BgGr,	{(ul)G_INPUTSTMT	},	NULL,  8,   6 },
-/*6*/	{ BgGr,	{(ul)G_OUTPUTSTMT	},	NULL,  8,   7 },
-/*7*/	{ BgNl,	{(ul)0			},	NULL,  8,  -1 },
-/*8*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
+/*5*/	{ BgGr,	{(ul)G_INPUTSTMT		},	NULL,  8,   6 },
+/*6*/	{ BgGr,	{(ul)G_OUTPUTSTMT		},	NULL,  8,   7 },
+/*7*/	{ BgNl,	{(ul)0					},	NULL,  8,  -1 },
+/*8*/	{ BgEn,	{(ul)0					},	NULL, -1,  -1 }
 };
 
 bow_t gCondition[] = 
 {
-/*0*/	{ BgSy,	{(ul)zODD		},	NULL,  1,   2 },
+/*0*/	{ BgSy,	{(ul)zODD			},	NULL,  1,   2 },
 /*1*/	{ BgGr,	{(ul)G_EXPRESSION	},	 co1, 10,  -1 },
 /*2*/	{ BgGr,	{(ul)G_EXPRESSION	},	NULL,  3,  -1 },
-/*3*/	{ BgSy,	{(ul)'='		},	 co2,  9,   4 },
-/*4*/	{ BgSy,	{(ul)'#'		},	 co2,  9,   5 },
-/*5*/	{ BgSy,	{(ul)'<'		},	 co2,  9,   6 },
-/*6*/	{ BgSy,	{(ul)zge		},	 co2,  9,   7 },
-/*7*/	{ BgSy,	{(ul)'>'		},	 co2,  9,   8 },
-/*8*/	{ BgSy,	{(ul)zle		},	 co2,  9,  -1 },
+/*3*/	{ BgSy,	{(ul)'='			},	 co2,  9,   4 },
+/*4*/	{ BgSy,	{(ul)'#'			},	 co2,  9,   5 },
+/*5*/	{ BgSy,	{(ul)'<'			},	 co2,  9,   6 },
+/*6*/	{ BgSy,	{(ul)zge			},	 co2,  9,   7 },
+/*7*/	{ BgSy,	{(ul)'>'			},	 co2,  9,   8 },
+/*8*/	{ BgSy,	{(ul)zle			},	 co2,  9,  -1 },
 /*9*/	{ BgGr, {(ul)G_EXPRESSION	},	 co3, 10,  -1 },
-/*10*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
+/*10*/	{ BgEn,	{(ul)0				},	NULL, -1,  -1 }
 };
 
 bow_t gExpression[] =
@@ -172,40 +172,40 @@ bow_t gExpression[] =
 
 bow_t gFactor[] =
 {
-/*0*/	{ BgMo,	{(ul)mcNumb		}, 	 fa1,  5,   1 },
+/*0*/	{ BgMo,	{(ul)mcNumb			}, 	 fa1,  5,   1 },
 /*1*/	{ BgMo,	{(ul)mcIdent		},	 fa2,  5,   2 },
-/*2*/	{ BgSy,	{(ul)'('		},	NULL,  3,  -1 },
+/*2*/	{ BgSy,	{(ul)'('			},	NULL,  3,  -1 },
 /*3*/	{ BgGr,	{(ul)G_EXPRESSION	},	NULL,  4,  -1 },
-/*4*/	{ BgSy,	{(ul)')'		},	NULL,  5,  -1 },
-/*5*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
+/*4*/	{ BgSy,	{(ul)')'			},	NULL,  5,  -1 },
+/*5*/	{ BgEn,	{(ul)0				},	NULL, -1,  -1 }
 };
 
 bow_t gTerm[] = 
 {
 /*0*/	{ BgGr,	{(ul)G_FACTOR	},	NULL,  1,  -1 },
-/*1*/	{ BgSy,	{(ul)'*'	},	NULL,  2,   3 },
+/*1*/	{ BgSy,	{(ul)'*'		},	NULL,  2,   3 },
 /*2*/	{ BgGr,	{(ul)G_FACTOR	},	 tr1,  1,  -1 },
-/*3*/	{ BgSy,	{(ul)'/'	},	NULL,  4,   5 },
+/*3*/	{ BgSy,	{(ul)'/'		},	NULL,  4,   5 },
 /*4*/	{ BgGr,	{(ul)G_FACTOR	},	 tr2,  1,  -1 },
-/*5*/	{ BgNl,	{(ul)0		},	NULL,  6,  -1 },
-/*6*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
+/*5*/	{ BgNl,	{(ul)0			},	NULL,  6,  -1 },
+/*6*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
 };
 
 bow_t gAssignmentStatement[] = 
 {
 /*0*/	{ BgMo,	{(ul)mcIdent		},	 st1,  1,  -1 },
-/*1*/	{ BgSy,	{(ul)zErg		},	NULL,  2,  -1 },
+/*1*/	{ BgSy,	{(ul)zErg			},	NULL,  2,  -1 },
 /*2*/	{ BgGr,	{(ul)G_EXPRESSION	},	 st2,  3,  -1 },
-/*3*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
+/*3*/	{ BgEn,	{(ul)0				},	NULL, -1,  -1 }
 };
 
 bow_t gConditionalStatement[] =
 {
-/*0*/	{ BgSy,	{(ul)zIF	},	NULL,  1,  -1 },
+/*0*/	{ BgSy,	{(ul)zIF		},	NULL,  1,  -1 },
 /*1*/	{ BgGr,	{(ul)G_CONDITION},	 st3,  2,  -1 },
-/*2*/	{ BgSy,	{(ul)zTHN	},	NULL,  3,  -1 },
+/*2*/	{ BgSy,	{(ul)zTHN		},	NULL,  3,  -1 },
 /*3*/	{ BgGr,	{(ul)G_STATEMENT},	 st4,  4,  -1 },
-/*4*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
+/*4*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
 };
 
 bow_t gLoopStatement[] = 
@@ -219,32 +219,32 @@ bow_t gLoopStatement[] =
 
 bow_t gCompoundStatment[] = 
 {  
-/*0*/	{ BgSy,	{(ul)zBGN	},	NULL,  1,  -1 },
+/*0*/	{ BgSy,	{(ul)zBGN		},	NULL,  1,  -1 },
 /*1*/	{ BgGr,	{(ul)G_STATEMENT},	NULL,  2,  -1 },
-/*2*/	{ BgSy,	{(ul)';'	},	NULL,  1,   3 },
-/*3*/	{ BgSy,	{(ul)zEND	},	NULL,  4,  -1 },
-/*4*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
+/*2*/	{ BgSy,	{(ul)';'		},	NULL,  1,   3 },
+/*3*/	{ BgSy,	{(ul)zEND		},	NULL,  4,  -1 },
+/*4*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
 };
 
 bow_t gProcedureCall[] =
 {
-/*0*/	{ BgSy,	{(ul)zCLL	},	NULL,  1,  -1 },
+/*0*/	{ BgSy,	{(ul)zCLL		},	NULL,  1,  -1 },
 /*1*/	{ BgMo,	{(ul)mcIdent	},	 st8,  2,  -1 },
-/*2*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
+/*2*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
 };
 
 bow_t gInputStatement[] =
 {
 /*0*/	{ BgSy,	{(ul)'?'	},	NULL,  1,  -1 },
-/*1*/	{ BgMo,	{(ul)mcIdent	},	 st9,  2,  -1 },
+/*1*/	{ BgMo,	{(ul)mcIdent},	 st9,  2,  -1 },
 /*2*/	{ BgEn,	{(ul)0		},	NULL, -1,  -1 }
 };
 
 bow_t gOutputStatment[] =
 {
-/*0*/	{ BgSy,	{(ul)'!'		},	NULL,  1,  -1 },
+/*0*/	{ BgSy,	{(ul)'!'			},	NULL,  1,  -1 },
 /*1*/	{ BgGr,	{(ul)G_EXPRESSION	},	st10,  2,  -1 },
-/*2*/	{ BgEn,	{(ul)0			},	NULL, -1,  -1 }
+/*2*/	{ BgEn,	{(ul)0				},	NULL, -1,  -1 }
 };
 
 void initPars(void) {
@@ -364,6 +364,7 @@ int main(int argc, char *argv[]) {
 					}
 					
 					closeCodeFile();
+					free(outname);
 					break;
 				case FAIL:
 					printf("\n FAIL\n");

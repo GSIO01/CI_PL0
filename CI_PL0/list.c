@@ -40,7 +40,11 @@ list_iter_p list_iterator(list_p list, char init){
 	else if(init==BACK){
 		iter->current = list->last;
 	}
-	else return NULL;
+	else {
+		if(iter != NULL)
+			free(iter);
+		return NULL;
+	}
 	iter->list = list;
 	iter->started = 0;
 	return iter;
