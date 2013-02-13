@@ -35,8 +35,7 @@ int bl1(void) {
 		error(ERR_CONST_REDEF, b);
 		return FAIL;
 	} else {
-		b = createIdent(morph.value.string
-						);
+		b = createIdent(morph.value.string);
 		b->type = btype_Const;
 		b->line = line;
 		b->column = col;
@@ -63,6 +62,7 @@ int bl2(void) {
 		}
 	}
 	
+	destroy_iterator(iter);
 	return OK;
 }
 
@@ -137,6 +137,7 @@ int bl5(void) {
 	destroy_list(currentProcedure->identList);
 	currentProcedure = currentProcedure->parent;
 	
+	destroy_iterator(iter);
 	return OK;
 }
 
@@ -151,6 +152,7 @@ int bl6(void) {
 	l->index = l->element->index;
 	list_add(labelStack, l, sizeof(label_t));
 	
+	destroy_iterator(iter);
 	return OK;
 }
 
